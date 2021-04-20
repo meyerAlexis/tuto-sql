@@ -13,20 +13,13 @@ create table person (
 	email VARCHAR(100),
 	date_of_birth DATE NOT NULL,
 	country_of_birth VARCHAR(50) NOT NULL,
-	car_id BIGINT REFERENCES car(id),
+	car_id BIGINT REFERENCES car (id),
 	UNIQUE(car_id)
 );
 
--- INSERT INTO PERSON
-insert into person (first_name, last_name, gender, email, date_of_birth, country_of_birth, car_id)
-values ('Fernanda', 'Beardon', 'Female', 'fernandab@is.gd', '1953-10-28', 'Comoros', '1');
+insert into person (first_name, last_name, gender, email, date_of_birth, country_of_birth) values ('Fernanda', 'Beardon', 'Female', 'fernandab@is.gd', '1953-10-28', 'Comoros');
+insert into person (first_name, last_name, gender, email, date_of_birth, country_of_birth) values ('Omar', 'Colmore', 'Male', null, '1921-04-03', 'Finland');
+insert into person (first_name, last_name, gender, email, date_of_birth, country_of_birth) values ('John', 'Matuschek', 'Male', 'john@feedburner.com', '1965-02-28', 'England');
 
-insert into person (first_name, last_name, gender, email, date_of_birth, country_of_birth, car_id)
-values ('Omar', 'Colmore', 'Male', null, '1921-04-03', 'Finland', '2');
-
-insert into person (first_name, last_name, gender, email, date_of_birth, country_of_birth, car_id)
-values ('Adriana', 'Matuschek', 'Female', 'amatuschek2@feedburner.com', '1965-02-28', 'Cameroon');
-
--- INSERT INTO CAR
 insert into car (make, model, price) values ('Land Rover', 'Sterling', '87665.38');
 insert into car (make, model, price) values ('GMC', 'Acadia', '17662.69');
